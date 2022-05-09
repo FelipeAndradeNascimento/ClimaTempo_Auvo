@@ -1,0 +1,100 @@
+﻿@model IList<WebPrevisaoTempo.Models.clsPrevisao>
+
+<div class="jumbotron">
+    <h2>Clima Tempo Simples</h2>
+</div>
+
+<div class="col-md-6" style="border:1px solid black; border-radius:5px">
+    <h2 class="badge bg-primary text-wrap" style="width: 15rem;">Clima mais quente</h2>
+    <p>
+        <table id="dados" width="100%">
+            <thead>
+                <tr>
+                    <th>Cidade</th>
+                    <th>Min</th>
+                    <th>Max</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (WebPrevisaoTempo.Models.clsPrevisao item in ViewBag.Model)
+                {
+                    <tr>
+                        <td>@Html.DisplayNameFor(item.CidadeId)</td>
+                        <td>Min @Html.DisplayNameFor(item.TemperaturaMinima)</td>
+                        <td>Max @Html.DisplayNameFor(item.TemperaturaMaxima)</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </p>
+</div>
+
+<div class="col-md-6" style="border:1px solid black; border-radius:5px">
+    <h2 class="badge bg-primary text-wrap" style="width: 15rem;">Clima mais frio</h2>
+    <p>
+        <table id="dados" width="100%">
+            <thead>
+                <tr>
+                    <th>Cidade</th>
+                    <th>Min</th>
+                    <th>Max</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (WebPrevisaoTempo.Models.clsPrevisao item in ViewBag.Model)
+                {
+                    <tr>
+                        <td>@Html.DisplayNameFor(item.CidadeId)</td>
+                        <td>Min @Html.DisplayNameFor(item.TemperaturaMinima)</td>
+                        <td>Max @Html.DisplayNameFor(item.TemperaturaMaxima)</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </p>
+</div>
+
+<div class="row">
+    <div class="col-md-11">
+        <select id="slcCidade" style="float: right;"><option>Selecione a cidade</option></select>
+    </div>
+</div>
+<br />
+<div>
+    <div class="col-md-2" style="border:1px solid black; border-radius:5px">
+        <h2 class="badge bg-primary text-wrap" style="width: 15rem;">Segunda-Feira</h2>
+        <p>Clima</p>
+        <p>Min <br /></p>
+        <p>Max <br /></p>
+    </div>
+    <div class="col-md-2" style="border:1px solid black; border-radius:5px">
+        <h2 class="badge bg-primary text-wrap" style="width: 15rem;">Terça-Feira</h2>
+        <p>Clima</p>
+        <p>Min <br /></p>
+        <p>Max <br /></p>
+    </div>
+    <div class="col-md-2" style="border:1px solid black; border-radius:5px">
+        <h2 class="badge bg-primary text-wrap" style="width: 15rem;">Quarta-Feira</h2>
+        <p>Clima</p>
+        <p>Min <br /></p>
+        <p>Max <br /></p>
+    </div>
+    <div class="col-md-2" style="border:1px solid black; border-radius:5px">
+        <h2 class="badge bg-primary text-wrap" style="width: 15rem;">Quinta-Feira</h2>
+        <p>Clima</p>
+        <p>Min <br /></p>
+        <p>Max <br /></p>
+    </div>
+    <div class="col-md-2" style="border:1px solid black; border-radius:5px">
+        <h2 class="badge bg-primary text-wrap" style="width: 15rem;">Sexta-Feira</h2>
+        <p>Clima</p>
+        <p>Min <br /></p>
+        <p>Max <br /></p>
+    </div>
+    <div class="col-md-2" style="border:1px solid black; border-radius:5px">
+        <h2 class="badge bg-primary text-wrap" style="width: 15rem;">Sabado</h2>
+        <p>Clima</p>
+        <p>Min <br /></p>
+        <p>Max <br /></p>
+    </div>
+</div>
